@@ -1,0 +1,19 @@
+{
+  "name": "distinct-destiny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+   "type": "module",
+ "scripts": {
+    "dev": "tailwindcss -i ./src/styles.css -o ./public/styles.css --watch",
+  "build-css": "tailwindcss -i ./src/styles.css -o ./public/styles.css --minify",
+  "build": "npm run build-css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
