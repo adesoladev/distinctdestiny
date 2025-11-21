@@ -47,6 +47,7 @@
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -226,6 +227,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
@@ -237,6 +241,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
   }
   .block {
     display: block;
@@ -298,6 +305,12 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -309,6 +322,9 @@
   }
   .items-start {
     align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -328,8 +344,14 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .overflow-x-hidden {
     overflow-x: hidden;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
@@ -406,6 +428,9 @@
   .bg-red-100 {
     background-color: var(--color-red-100);
   }
+  .bg-secondary {
+    background-color: #000000;
+  }
   .bg-text {
     background-color: #FFFFFF;
   }
@@ -423,6 +448,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -546,6 +574,20 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .hover\:text-accent {
+    &:hover {
+      @media (hover: hover) {
+        color: #925047;
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
   }
   .hover\:shadow-md {
     &:hover {
