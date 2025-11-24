@@ -6,6 +6,8 @@ export default {
         secondary: "#000000",
         accent: "#925047",
         text: "#FFFFFF",
+        statsrating: "#FFD700",
+        reviewcard: "#FFEBEE",
       },
       fontFamily: {
         body: ["Poppins", "sans-serif"],
