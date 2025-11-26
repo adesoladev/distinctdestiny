@@ -11,10 +11,13 @@ body {
 /* Prevent layout shift before AOS initializes */
 [data-aos] {
   pointer-events: none;
+  opacity: 0;
+  transition-property: opacity, transform;
 }
 
 [data-aos].aos-animate {
   pointer-events: auto;
+  opacity: 1;
 }
 
 /* Prevent flash but allow animations */
@@ -61,5 +64,5 @@ body {
 
 .footer-icon i:hover {
   cursor: pointer;
-  color: #9250#000000;
+  color: #000000;
 }
