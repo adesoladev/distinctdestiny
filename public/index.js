@@ -39,10 +39,10 @@ navLinks.forEach(link => {
     e.preventDefault();
 
     // Remove active state from all links
-    navLinks.forEach(l => l.classList.remove("!text-accent", "font-semibold"));
+    navLinks.forEach(l => l.classList.remove("!secondary", "font-semibold"));
 
     // Add active state to clicked link
-    link.classList.add("!text-accent", "font-semibold");
+    link.classList.add("!text-secondary", "font-semibold");
 
     // Smooth scroll to section
     const targetId = link.getAttribute("href").substring(1);
