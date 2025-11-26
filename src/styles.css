@@ -11,13 +11,10 @@ body {
 /* Prevent layout shift before AOS initializes */
 [data-aos] {
   pointer-events: none;
-  opacity: 0;
-  transition-property: opacity, transform;
 }
 
 [data-aos].aos-animate {
   pointer-events: auto;
-  opacity: 1;
 }
 
 /* Prevent flash but allow animations */
@@ -27,6 +24,24 @@ body {
 
 [data-aos].aos-animate {
   visibility: visible;
+}
+
+nav {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Ensure all sections respect viewport width */
+section {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.testimonial-container {
+  will-change: transform;
+  overflow-x: hidden;
 }
 
 .primary-btn {
