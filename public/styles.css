@@ -667,8 +667,8 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .\!text-accent {
-    color: #925047 !important;
+  .\!text-secondary {
+    color: #000000 !important;
   }
   .text-blue-600 {
     color: var(--color-blue-600);

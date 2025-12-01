@@ -1,3 +1,69 @@
+// Load header and footer
+async function loadComponent(elementId, filePath) {
+  try {
+    const response = await fetch(filePath);
+    const html = await response.text();
+    
+    // Get the target element
+    const targetElement = document.getElementById(elementId);
+    
+    // Create a temporary container
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    
+    // Insert the first child (the nav) directly, replacing the wrapper
+    const component = temp.firstElementChild;
+    targetElement.parentNode.replaceChild(component, targetElement);
+    
+  } catch (error) {
+    console.error(`Error loading ${filePath}:`, error);
+  }
+}
+
+function initMobileMenu() {
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  
+  if (!menuBtn || !menu) return;
+  
+  let isOpen = false;
+  
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    menu.classList.toggle("hidden");
+    menuBtn.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+}
+
+// IMPORTANT: Initialize everything in the correct order
+document.addEventListener('DOMContentLoaded', async () => {
+  // 1. Load components first
+  await loadComponent('header', './components/header.html');
+  await loadComponent('footer', './components/footer.html');
+  
+  // 2. Then initialize mobile menu (after header loads)
+  initMobileMenu();
+  
+  // 3. Initialize AOS
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-in-out',
+    offset: 50,
+    anchorPlacement: 'top-bottom',
+  });
+  
+  // 4. Refresh AOS after everything loads
+  AOS.refresh();
+});
+
+// Refresh AOS after images load
+window.addEventListener('load', function() {
+  AOS.refresh();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   AOS.init({
     once: true,
