@@ -1,3 +1,82 @@
+// Load header and footer
+async function loadComponent(elementId, filePath) {
+  try {
+    const response = await fetch(filePath);
+    const html = await response.text();
+    
+    const targetElement = document.getElementById(elementId);
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    
+    const component = temp.firstElementChild;
+    targetElement.parentNode.replaceChild(component, targetElement);
+    
+  } catch (error) {
+    console.error(`Error loading ${filePath}:`, error);
+  }
+}
+
+// Mobile menu
+function initMobileMenu() {
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  
+  if (!menuBtn || !menu) return;
+  
+  let isOpen = false;
+  
+  menuBtn.addEventListener("click", () => {
+    isOpen = !isOpen;
+    menu.classList.toggle("hidden");
+    menuBtn.innerHTML = isOpen
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+}
+
+// Back to Top button
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('backToTop');
+  if (!backToTopBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Initialize everything after DOM content loaded
+document.addEventListener('DOMContentLoaded', async () => {
+  // 1. Load header and footer
+  await loadComponent('header', './components/header.html');
+  await loadComponent('footer', './components/footer.html');
+
+  // 2. Initialize mobile menu
+  initMobileMenu();
+
+  // 3. Initialize Back to Top button AFTER footer is loaded
+  initBackToTop();
+
+  // 4. Initialize AOS
+  AOS.init({
+    once: true,
+    duration: 800,
+    easing: 'ease-in-out',
+    offset: 50,
+    anchorPlacement: 'top-bottom',
+  });
+
+  AOS.refresh();
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
   AOS.init({
     once: true,
