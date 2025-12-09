@@ -3,14 +3,14 @@ async function loadComponent(elementId, filePath) {
   try {
     const response = await fetch(filePath);
     const html = await response.text();
-    
+
     const targetElement = document.getElementById(elementId);
     const temp = document.createElement('div');
     temp.innerHTML = html;
-    
+
     const component = temp.firstElementChild;
     targetElement.parentNode.replaceChild(component, targetElement);
-    
+
   } catch (error) {
     console.error(`Error loading ${filePath}:`, error);
   }
@@ -20,11 +20,11 @@ async function loadComponent(elementId, filePath) {
 function initMobileMenu() {
   const menuBtn = document.getElementById("menu-btn");
   const menu = document.getElementById("menu");
-  
+
   if (!menuBtn || !menu) return;
-  
+
   let isOpen = false;
-  
+
   menuBtn.addEventListener("click", () => {
     isOpen = !isOpen;
     menu.classList.toggle("hidden");
@@ -52,19 +52,44 @@ function initBackToTop() {
   });
 }
 
-// Initialize everything after DOM content loaded
+// Initialize everything
 document.addEventListener('DOMContentLoaded', async () => {
-  // 1. Load header and footer
+
+  // Load header and footer first
   await loadComponent('header', './components/header.html');
   await loadComponent('footer', './components/footer.html');
 
-  // 2. Initialize mobile menu
+  // NAV ACTIVE LINK HANDLER — placed after header loads
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Remove active state from all
+      navLinks.forEach(l => l.classList.remove("!text-secondary", "font-semibold"));
+
+      // Add active state to clicked
+      link.classList.add("!text-secondary", "font-semibold");
+
+      const href = link.getAttribute("href");
+
+      if (href.startsWith("#")) {
+        const section = document.querySelector(href);
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.href = href;
+      }
+    });
+  });
+
+  // Initialize mobile menu
   initMobileMenu();
 
-  // 3. Initialize Back to Top button AFTER footer is loaded
+  // Initialize Back to Top
   initBackToTop();
 
-  // 4. Initialize AOS
+  // Initialize AOS
   AOS.init({
     once: true,
     duration: 800,
@@ -76,105 +101,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   AOS.refresh();
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  AOS.init({
-    once: true,
-    duration: 800,
-    easing: 'ease-in-out',
-    offset: 50, // Changed from 0 to 50
-    anchorPlacement: 'top-bottom',
-  });
-});
-
-// Refresh AOS after images and content load
-window.addEventListener('load', function() {
+// Refresh AOS after full load
+window.addEventListener('load', () => {
   AOS.refresh();
 });
 
-// Select hamburger button and mobile menu
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
 
-let isOpen = false;
-
-menuBtn.addEventListener("click", () => {
-  isOpen = !isOpen;
-
-  // Toggle mobile menu visibility
-  menu.classList.toggle("hidden");
-
-  // Toggle hamburger / close icon
-  menuBtn.innerHTML = isOpen
-    ? '<i class="fa-solid fa-xmark"></i>' // Cross icon when open
-    : '<i class="fa-solid fa-bars"></i>'; // Hamburger icon when closed
-});
- 
-// NAV ACTIVE LINK HANDLER
-const navLinks = document.querySelectorAll(".nav-link");
-
-navLinks.forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    // Remove active state from all links
-    navLinks.forEach(l => l.classList.remove("!secondary", "font-semibold"));
-
-    // Add active state to clicked link
-    link.classList.add("!text-secondary", "font-semibold");
-
-    // Smooth scroll to section
-    const targetId = link.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
-
-// Counter animation function
-      function animateCounter(element, target, duration = 2000) {
-        const isDecimal = target % 1 !== 0;
-        const increment = target / (duration / 16); // 60fps
-        let current = 0;
-        
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            element.textContent = isDecimal ? target.toFixed(1) : Math.floor(target).toLocaleString();
-            clearInterval(timer);
-          } else {
-            element.textContent = isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString();
-          }
-        }, 16);
-      }
-
-      // Intersection Observer to trigger animation when section is visible
-      const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll('.counter');
-            counters.forEach(counter => {
-              const target = parseFloat(counter.getAttribute('data-target'));
-              animateCounter(counter, target);
-            });
-            observer.unobserve(entry.target); // Only animate once
-          }
-        });
-      }, observerOptions);
-
-      // Observe the stats section
-      const statsSection = document.getElementById('stats');
-      if (statsSection) {
-        observer.observe(statsSection);
-      }
- 
- // INFINITE TESTIMONIAL SLIDER
+// INFINITE TESTIMONIAL SLIDER
         const container = document.querySelector('.testimonial-container');
         const nextBtn = document.querySelector('.next');
         const prevBtn = document.querySelector('.prev');
