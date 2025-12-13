@@ -72,6 +72,22 @@ section {
   border-radius: 15%;
 }
 
+.border-bottom-short {
+  display: inline-block; /* shrink to content */
+  position: relative;
+}
+
+.border-bottom-short::after {
+  content: "";
+  display: block;
+  width: 80px; /* adjust length */
+  height: 3px; /* border thickness */
+  background-color: #f59e0b; /* matches text-accent or your color */
+  margin: 0 auto; /* center it */
+  margin-top: 0.5rem; /* space below text */
+  border-radius: 2px; /* optional, rounded edges */
+}
+
 .footer-links ul li:hover {
   cursor: pointer;
   color: #000000;
