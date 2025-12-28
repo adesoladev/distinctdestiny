@@ -38,34 +38,320 @@
           build knowledge, skills, and character.
         </p>
 
-        <div class="flex items-center gap-7">
+        <!-- <div class="flex items-center gap-7">
           <div
             class="primary-btn transition-all duration-400 ease-in-out hover:scale-[1.04] mt-3"
           >
             <a href="#">Explore Our Programs</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <section class="px-5 md:px-24 py-10 text-secondary bg-text">
-      <div class="flex flex-col justify-center items-center">
+  <section class="px-5 md:px-24 py-10 text-secondary bg-text"> 
+    <div class="flex flex-col items-center">
+    <h2 class="text-2xl font-heading font-bold text-center text-accent border-bottom-short mb-12">
+      Our Academic Programs
+    </h2>
+
+    <!-- Tab Buttons -->
+    <div class="flex gap-4 mb-10">
+      <button class="tab-btn px-5 py-2 rounded bg-accent text-white" data-target="nursery">Nursery</button>
+      <button class="tab-btn px-5 py-2 rounded bg-gray-200 text-gray-700" data-target="primary">Primary</button>
+      <button class="tab-btn px-5 py-2 rounded bg-gray-200 text-gray-700" data-target="secondary">Secondary</button>
+    </div>
+
+    
+  </div>
+  
+  <!-- Nursery Program -->
+  <!-- Tab Content -->
+    <div class="tab-content ">
+      <div id="nursery" class="content active">
+        <div class="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+            <!-- Left Side Content -->
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">A Foundation for Lifelong Learning</h3>
+                <p class="max-w-xl text-gray-600 leading-relaxed">
+                    Our nursery program is designed to nurture curiosity and creativity in young learners. Through playful, hands-on activities, children develop early literacy, numeracy, and social skills in a safe and stimulating environment. Teachers guide each child with patience and attention, helping them build confidence and a love for learning from the very beginning.
+                </p> 
+                <div class="mt-6">
+                    <span class="font-bold text-gray-800">Key Features</span>
+                    <ul class="list-disc pl-5 pt-2 text-gray-600 space-y-1">
+                        <li>Interactive learning through play</li>
+                        <li>Early exposure to reading, numbers, and colors</li>
+                        <li>Focus on emotional and social development</li>
+                    </ul>      
+                </div>
+            </div>
+            
+            <!-- Right Side Card -->
+            <div class="flex-1">
+                <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-6 md:p-8 border border-amber-100">
+                    
+                    <!-- Early Learning & Discovery -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-amber-100 to-orange-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-orange-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Early Learning & Discovery</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                            Our nursery program encourages curiosity through play, exploration, and guided activities.
+                        </p>
+                    </div>
+
+                    <!-- Care & Emotional Development -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-rose-100 to-pink-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Care & Emotional Development</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                            Children learn in a safe, nurturing space that supports confidence and social growth.
+                        </p>
+                    </div>
+
+                    <!-- Outcome -->
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="bg-yellow-100 p-2.5 rounded-xl">
+                                <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800">Outcome</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed pl-1">
+                            Young learners develop a strong foundation and excitement for learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Primary Program -->
+    <!-- Tab Content -->
+    <div class="tab-content ">
+      <div id="primary" class="content hidden">
+        <div class="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+            <!-- Left Side Content -->
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">Building Knowledge and Character</h3>
+                <p class="max-w-xl text-gray-600 leading-relaxed">
+                    In the primary stage, students expand their knowledge across core subjects while continuing to grow creatively and socially. Our curriculum emphasizes critical thinking, problem-solving, and collaborative learning. Teachers provide individual attention to help each child excel academically and develop strong moral values, preparing them for the challenges of secondary school and beyond.
+                </p> 
+                <div class="mt-6">
+                    <span class="font-bold text-gray-800">Key Features</span>
+                    <ul class="list-disc pl-5 pt-2 text-gray-600 space-y-1">
+                        <li>Strong foundation in Mathematics, English, Science, and Arts</li>
+                        <li>Extracurricular activities to encourage creativity and teamwork</li>
+                        <li>Character education and value-based learningt</li>
+                    </ul>      
+                </div>
+            </div>
+            
+            <!-- Right Side Card -->
+            <div class="flex-1">
+                <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-6 md:p-8 border border-amber-100">
+                    
+                    <!-- Academic Growth -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-amber-100 to-orange-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-orange-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Academic Growth</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                            Core subjects are taught through engaging lessons that build understanding and confidence.
+                        </p>
+                    </div>
+
+                    <!-- Character & Creativity -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-rose-100 to-pink-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Character & Creativity</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                           Students develop good values, teamwork skills, and creative expression.
+                        </p>
+                    </div>
+
+                    <!-- Outcome -->
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="bg-yellow-100 p-2.5 rounded-xl">
+                                <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800">Outcome</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed pl-1">
+                            Pupils become disciplined, curious learners ready for secondary education.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Program -->
+    <!-- Tab Content -->
+    <div class="tab-content ">
+      <div id="secondary" class="content hidden">
+        <div class="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+            <!-- Left Side Content -->
+            <div class="flex-1">
+                <h3 class="text-2xl font-bold mb-2 text-gray-800">Preparing for the Future</h3>
+                <p class="max-w-xl text-gray-600 leading-relaxed">
+                    The secondary program at Distinct Destiny focuses on academic excellence, personal growth, and career readiness. Students engage in a rigorous curriculum while being encouraged to explore their interests and talents. Emphasis is placed on leadership, critical thinking, and ethical decision-making, ensuring that graduates are not only well-prepared for higher education but also equipped to make a positive impact in society.
+                </p> 
+                <div class="mt-6">
+                    <span class="font-bold text-gray-800">Key Features</span>
+                    <ul class="list-disc pl-5 pt-2 text-gray-600 space-y-1">
+                        <li>Advanced subject offerings and STEM programs</li>
+                        <li>Leadership and mentorship initiatives</li>
+                        <li>College and career guidance</li>
+                    </ul>      
+                </div>
+            </div>
+            
+            <!-- Right Side Card -->
+            <div class="flex-1">
+                <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-6 md:p-8 border border-amber-100">
+                    
+                    <!-- Academic Excellence -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-amber-100 to-orange-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-orange-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Academic Excellence</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                            A focused curriculum develops critical thinking and practical application of knowledge.
+                        </p>
+                    </div>
+
+                    <!-- Personal & Career Growth -->
+                    <div class="mb-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-gradient-to-br from-rose-100 to-pink-100 p-3 rounded-2xl">
+                                <svg class="w-6 h-6 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Personal & Career Growth</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed pl-1">
+                           Mentorship and leadership opportunities guide students toward future goals.
+                        </p>
+                    </div>
+
+                    <!-- Outcome -->
+                    <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="bg-yellow-100 p-2.5 rounded-xl">
+                                <svg class="w-5 h-5 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800">Outcome</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed pl-1">
+                            Graduates are confident, responsible, and prepared for higher education and life beyond school.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- Assessment & Evaluation Section -->
+  <section class="px-5 md:px-24 py-10 text-secondary bg-gradient-to-r from-amber-50 to-orange-50">
+      <div class="flex flex-col items-center pb-12">
         <h2
-          class="mt-5 pb-10 text-3xl font-heading font-bold text-center text-accent border-bottom-short"
+          class="text-2xl font-heading font-bold flex items-center text-center md:text-left text-accent border-bottom-short"
+          data-aos="zoom-in"
         >
-          Our Academic Programs
-        </h2>
+          Assessment & Evaluation
 
-        <div class="flex md:flex-row flex-col gap-x-14 text-center">
-          <span class="py-4">Nursery</span>
-          <span class="py-4">Primary</span>
-          <span class="py-4">Secondary</span>
+        </h2>
+      </div>
+
+      <div class="md:flex gap-8">
+        <div class="flex-1 max-w-sm mb-10 md:mb-0" data-aos="slide-left">
+          <div class="flex flex-col text-center items-center gap-4">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
+            <i class="fa-solid fa-laptop text-2xl text-blue-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Structured Assessments</h3>
+              <p class="text-sm ">
+                Well-organized tests and examinations designed to measure understanding and academic progress.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 max-w-sm mb-10 md:mb-0" data-aos="slide-left">
+          <div class="flex flex-col text-center items-center gap-4">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fa-solid fa-book text-2xl text-green-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Continuous Assessment</h3>
+              <p class="text-sm ">
+                Regular evaluations through classwork, assignments, and projects to support steady learning growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-1 max-w-sm" data-aos="slide-left">
+          <div class="flex flex-col text-center items-center gap-4">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"
+            >
+             <i class="fa-solid fa-file-lines text-2xl text-purple-600"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-1">Progress Reports</h3>
+              <p class="text-sm ">
+                Clear and detailed academic reports shared with parents to track development and improvement.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- <div id="footer"></div> -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="index.js"></script>
-  </body>
+<div id="footer"></div>
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="index.js"></script>
+</body>
 </html>
