@@ -8,7 +8,8 @@ export default {
         text: "#FFFFFF",
         statsrating: "#FFD700",
         reviewcard: "#FFEBEE",
-        backtotop: "#FF7043"
+        backtotop: "#FF7043",
+        gallery: "#fbf0fc"
       },
       fontFamily: {
         body: ["Poppins", "sans-serif"],
