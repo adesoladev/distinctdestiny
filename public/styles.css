@@ -537,9 +537,6 @@
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
-  .max-w-4xl {
-    max-width: var(--container-4xl);
-  }
   .max-w-5xl {
     max-width: var(--container-5xl);
   }
@@ -1769,11 +1766,6 @@
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
-    }
-  }
-  .md\:max-w-7xl {
-    @media (width >= 48rem) {
-      max-width: var(--container-7xl);
     }
   }
   .md\:max-w-\[40rem\] {
